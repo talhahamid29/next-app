@@ -1,10 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
-@Entity()
+@Entity
 export class Product1 {
     @PrimaryGeneratedColumn()
     id: number;
-
 
     @CreateDateColumn()
     createdAt:  Date;
