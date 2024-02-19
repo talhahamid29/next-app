@@ -24,13 +24,15 @@ export default async function handler(req: NextRequest, res: NextResponse) {
         }
       });
 
-      res.status(200).json(result);
+      // Send a JSON response
+      await res.json( );
     } else {
       // If content type is not JSON, send an error response
       throw new Error('Content type is not application/json');
     }
   } catch (error) {
     console.error('Error during product addition:', error);
-    return NextResponse.json({ success: false, error: 'Failed to add product' }, { status: 500 });
+    // Send an error response
+    await res.json( );
   }
 }
