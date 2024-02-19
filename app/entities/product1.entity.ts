@@ -1,9 +1,10 @@
-import {Entity, Column,  PrimaryGeneratedColumn , CreateDateColumn , UpdateDateColumn} from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity()
 export class Product1 {
     @PrimaryGeneratedColumn()
-    id : number;
+    id: number;
+
 
     @CreateDateColumn()
     createdAt:  Date;
