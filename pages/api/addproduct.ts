@@ -7,8 +7,12 @@ export default async function handler(req: NextRequest, res:NextResponse) {
     // // Process the data and add the product
     // ...
 
-    console.log('request object is' , req.body.productCategory)
-
+    if (req.body && req.body.productCategory) {
+    console.log('request object is', req.body.productCategory);
+        // Continue with your code
+    } else {
+        console.log('Request body or productCategory is null or undefined.');
+    }
     const result = await prisma.product2.create({
       data : {
         productCategory : req.body.productCategory,
