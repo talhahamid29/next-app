@@ -6,21 +6,20 @@ export class Product1 {
     id: number;
 
     @CreateDateColumn()
-    createdAt:  Date;
+    createdAt: Date;
 
     @UpdateDateColumn()
     updatedAt: Date;
 
-    @Column({nullable: false })
-    productCategory : string;
+    @Column({ nullable: false })
+    productCategory: string;
 
-    @Column({ unique: true , nullable: false })
-    productName : string;
+    @Column({ unique: true, nullable: false })
+    productName: string;
 
-    @Column({unique: true , nullable: false})
-    serialNumber : number;
+    @Column({ unique: true, nullable: false })
+    serialNumber: number;
 
-    @Column({ nullable: false})
-    price : number;
-
+    @Column({ nullable: false })
+    price: number;
 }
